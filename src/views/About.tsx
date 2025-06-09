@@ -44,10 +44,7 @@ const About = () => {
 
           <Reveal>
             <p className="text-center xl:text-start text-base sm:text-lg text-textSecondary">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis incidunt quis praesentium voluptates et cupiditate
-              minus rem. Voluptatibus ullam beatae expedita voluptatum error,
-              voluptate deserunt impedit similique fuga recusandae sit.
+              Hi, I'm Diya Gaur — a final-year B.E. student at MBM University, Jodhpur, specializing in Artificial Intelligence and Data Science. I’m passionate about building innovative tech solutions, from intelligent systems to impactful web experiences. With strong programming skills, a problem-solving mindset, and effective communication, I love turning ideas into real-world projects. I'm always eager to learn, collaborate, and create meaningful technology.
             </p>
           </Reveal>
 

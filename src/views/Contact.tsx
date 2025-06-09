@@ -1,4 +1,5 @@
 // assets
+import { useState, ChangeEvent } from "react";
 import contactPageImg from "../assets/contact-page.svg";
 import contactIllustration from "../assets/contact-illustration.svg";
 
@@ -13,6 +14,26 @@ import { fadeIn, scale } from "../utils/variants";
 import { transition } from "../utils/transition";
 
 const Contact = () => {
+  const [name, setName] = useState("");
+  const [senderEmail, setSenderEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const recipientEmail = "diyagaur59@gmail.com";
+
+  const handleSendMessage = () => {
+    if (!name.trim() || !senderEmail.trim() || !message.trim()) {
+      alert("Please fill in all fields.");
+      return;
+    }
+    // Basic email validation
+    if (!/^\S+@\S+\.\S+$/.test(senderEmail)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+    const subject = encodeURIComponent(`Project Inquiry from ${name}`);
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${senderEmail}\n\nMessage:\n${message}`);
+    window.location.href = `mailto:${recipientEmail}?subject=${subject}&body=${body}`;
+  };
   return (
     <div
       id="contact"
@@ -59,19 +80,33 @@ const Contact = () => {
           className="flex-1 flex flex-col gap-6 w-full max-w-[696px]"
         >
           <div className="flex flex-col sm:flex-row items-center gap-6">
-            <LabelInput labelText="Your name" placeholderText="Name" />
-            <LabelInput labelText="Your email" placeholderText="Email" />
+            <LabelInput
+              labelText="Your name"
+              placeholderText="Name"
+              value={name}
+              onChange={(e: ChangeEvent<HTMLInputElement>) => setName(e.target.value)}
+            />
+            <LabelInput
+              labelText="Your email"
+              placeholderText="Email"
+              value={senderEmail}
+              onChange={(e: ChangeEvent<HTMLInputElement>) => setSenderEmail(e.target.value)}
+            />
           </div>
 
           <div className="flex flex-col sm:flex-row items-center gap-6">
             <LabelInput
               labelText="Your message"
               placeholderText="Message"
+              value={message}
+              onChange={(e: ChangeEvent<HTMLTextAreaElement>) => setMessage(e.target.value)}
               textarea
             />
           </div>
 
-          <Button secondary>Send Message</Button>
+          <Button secondary onClick={handleSendMessage}>
+            Send Message
+          </Button>
         </motion.div>
       </div>
 

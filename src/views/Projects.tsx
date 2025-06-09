@@ -17,14 +17,14 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../utils/variants";
 import { transition } from "../utils/transition";
 
-type Category = "uiUx" | "web";
+type Category = "ML" | "web";
 
 const Projects = () => {
-  const [activeCategory, setActiveCategory] = useState<Category>("uiUx");
+  const [activeCategory, setActiveCategory] = useState<Category>("ML");
 
   const filteredProjects = () => {
-    if (activeCategory === "uiUx") {
-      return projects.filter((item) => item.category === "uiUx");
+    if (activeCategory === "ML") {
+      return projects.filter((item) => item.category === "ML");
     } else {
       return projects.filter((item) => item.category === "web");
     }
@@ -61,8 +61,8 @@ const Projects = () => {
             className="flex items-center gap-4 justify-center xl:justify-start flex-col sm:flex-row"
           >
             <Button
-              secondary={activeCategory === "uiUx" ? true : false}
-              onClick={() => setActiveCategory("uiUx")}
+              secondary={activeCategory === "ML" ? true : false}
+              onClick={() => setActiveCategory("ML")}
             >
               UI/UX
             </Button>

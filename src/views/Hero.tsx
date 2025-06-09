@@ -16,6 +16,26 @@ import { motion } from "framer-motion";
 import { transition } from "../utils/transition";
 import { fadeIn, scale } from "../utils/variants";
 
+// Assume your CV is in the public folder, e.g., public/Diya_Gaur_CV.pdf
+const CV_FILE_NAME = "Diya_Gaur_CV.pdf";
+const CV_FILE_URL = `/${CV_FILE_NAME}`;
+
+const handleDownloadCV = () => {
+  const link = document.createElement("a");
+  link.href = CV_FILE_URL;
+  link.setAttribute("download", CV_FILE_NAME); // or any other extension
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
+const handleKnowMeClick = () => {
+  const knowMeSection = document.getElementById("know-me-ai");
+  if (knowMeSection) {
+    knowMeSection.scrollIntoView({ behavior: "smooth" });
+  }
+};
+
 const Hero = () => {
   return (
     <div
@@ -46,7 +66,7 @@ const Hero = () => {
             <br />
             <span className="text-secondary">
               <Typewriter
-                words={["Developer", "Designer", "YouTuber"]}
+                words={["Developer", "Problem Solver", "ML Learner"]}
                 cursor
                 cursorStyle="_"
                 typeSpeed={250}
@@ -63,8 +83,12 @@ const Hero = () => {
             viewport={{ once: false }}
             className="my-12 flex flex-col sm:flex-row items-center gap-6 justify-center xl:justify-start"
           >
-            <Button secondary>Hire me</Button>
-            <Button icon={downloadIcon}>Download CV</Button>
+            <Button secondary onClick={handleKnowMeClick}>
+              Know me
+            </Button>
+            <Button icon={downloadIcon} onClick={handleDownloadCV}>
+              Download CV
+            </Button>
           </motion.div>
         </div>
 
