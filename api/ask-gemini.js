@@ -58,7 +58,7 @@ export default async function handler(req, res) {
 
   try {
     const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
-    const model = genAI.getGenerativeModel({ model: "gemini-1.0-pro" }); // Updated model name
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest" }); // Try this model
 
     const prompt = `${MY_PERSONAL_CONTEXT}User's Question: ${question}\nAnswer:`;
 
