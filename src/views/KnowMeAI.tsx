@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import { Reveal } from "../components"; // Assuming Reveal component can be reused
+import { Reveal } from "../components"; 
+import contactPageImg from "../assets/contact-page.svg";
 
-export {}; // Add this line to ensure the file is treated as a module
+
+export {}; 
 
 const KnowMeAI = () => {
   const [question, setQuestion] = useState("");
@@ -44,20 +46,25 @@ const KnowMeAI = () => {
     <div
       id="know-me-ai"
       className="min-h-screen flex flex-col items-center justify-center relative bg-backgroundPrimary py-16 px-12" // Adjust styling as needed
-      // style={{ background: `url(${/* some_relevant_background_image_if_any */})`, ... }}
+      style={{
+        background: `url(${contactPageImg})`,
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+      }}
     >
       <Reveal>
         <h2
           className="text-center text-4xl sm:text-5xl lg:text-[64px] 
               font-bold text-textPrimary mb-12"
         >
-          Ask AI About <span className="text-secondary">Me</span>
+          Ask About <span className="text-secondary">Me!</span>
         </h2>
       </Reveal>
 
       <div className="w-full max-w-3xl bg-neutral-800/50 backdrop-blur-md p-8 rounded-lg shadow-xl">
         <p className="text-center text-textSecondary text-lg mb-6">
-          Curious to know more? Ask a question below, and an AI (powered by Gemini) will answer based on the context I've provided about myself.
+          Curious to know more? Ask a question below!
         </p>
         <textarea
           placeholder="Type your question here..."
@@ -79,7 +86,7 @@ const KnowMeAI = () => {
             <p style={{ whiteSpace: "pre-wrap" }}>{answer}</p>
           )}
           {!answer && !isLoading && (
-            <p className="text-neutral-500">AI's answer will appear here...</p>
+            <p className="text-neutral-500"> Answer will appear here...</p>
           )}
         </div>
       </div>

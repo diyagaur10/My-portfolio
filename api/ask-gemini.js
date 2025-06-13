@@ -1,44 +1,12 @@
-// Example for a Node.js based serverless function (e.g., api/ask-gemini.js)
-// This file would typically go into an 'api' directory in the root of your project
-// if you are deploying to a platform like Vercel or Netlify.
 
-// You'll need to install the Gemini SDK if you haven't: npm install @google/generative-ai
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-// 1. Retrieve your API key from environment variables.
-//    On your deployment platform (Vercel, Netlify, etc.), you'll set
-//    GEMINI_API_KEY to the value of your REACT_APP_GEMINI_API_KEY.
+
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 
-// 2. DEFINE YOUR CONTEXT HERE
+
 const MY_PERSONAL_CONTEXT = `
-Diya Gaur is a passionate and dedicated final-year B.E. student at MBM University, Jodhpur,
-specializing in Artificial Intelligence and Data Science. She possesses a strong foundation
-in programming languages such as Python, JavaScript, and TypeScript, and has hands-on
-experience with web development technologies including React and Node.js.
-
-Key Skills:
-- Programming: Python, JavaScript, TypeScript, Java (basic)
-- Web Development: React, Node.js, HTML, CSS, Tailwind CSS
-- AI/ML: Scikit-learn, Pandas, NumPy, basic understanding of TensorFlow
-- Databases: SQL (basic), MongoDB (learning)
-- Tools: Git, VS Code
-
-Projects:
-- Portfolio Website (this site): Built with React, TypeScript, and Tailwind CSS.
-- [Mention another project if you have one, e.g., "AI-powered Chatbot for X"]
-
-Interests & Goals:
-Diya is keenly interested in leveraging AI to solve real-world problems and is always
-eager to learn new technologies. She is actively seeking opportunities where she can
-contribute her skills and grow as an AI and software engineer. She is a proactive
-problem-solver and a collaborative team player.
-
-Instructions for the AI:
-Based *only* on the context provided above about Diya Gaur, answer the user's question.
-If the answer cannot be found in the context, respond with "I'm sorry, I don't have that specific information about Diya based on the context I've been given."
----
-`;
+Hi, I’m Diya Gaur, a passionate and dedicated final-year B.E. student at MBM University, Jodhpur, specializing in Artificial Intelligence and Data Science. With a strong foundation in programming, I’ve spent the last few years honing my skills in Python, JavaScript, and TypeScript, while also gaining hands-on experience in modern web development with technologies like React, Node.js, HTML, CSS, and Tailwind CSS. My journey in AI and machine learning has led me to work with tools like Scikit-learn, Pandas, and NumPy, and I’m currently exploring TensorFlow and deepening my understanding of MongoDB alongside SQL. I built my personal portfolio website using React and TypeScript to reflect my skills and showcase my work. I’m deeply interested in leveraging AI to solve real-world problems, especially in spaces where technology can make a meaningful impact. My hobbies are dancing, debating, and I am a Theatre artist and NCC cadet I consider myself a curious learner, a collaborative team player, and someone who is always excited about building new things and exploring innovative solutions. I’m actively looking for opportunities where I can contribute, grow, and make a difference as an AI and software engineer. And if you ask me something I don’t know... well, that’s a secret. 😉;`
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {

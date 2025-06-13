@@ -1,10 +1,10 @@
 // assets
 import aboutPageImg from "../assets/about-me-page.svg";
 import aboutIllustration from "../assets/about-illustration.svg";
-import facebookIcon from "../assets/facebook-icon.svg";
+import linkedinIcon from "../assets/icons8-linkedin-35.svg";
 import instagramIcon from "../assets/instagram-icon.svg";
 import twitterIcon from "../assets/twitter-icon.svg";
-import youtubeIcon from "../assets/youtube-icon.svg";
+import leetcodeIcon from "../assets/icons8-leetcode (3).svg";
 
 // components
 import { SocialMediaIcon, Reveal } from "../components";
@@ -15,6 +15,14 @@ import { motion } from "framer-motion";
 // utils
 import { fadeIn, scale } from "../utils/variants";
 import { transition } from "../utils/transition";
+
+// Define your social media profile URLs
+const SOCIAL_LINKS = {
+  linkedIn: "https://www.linkedin.com/in/diya-gaur/", 
+  instagram: "https://www.instagram.com/__dewww/", 
+  twitter: "https://x.com/DiyaGaur10", 
+  leetcode: "https://leetcode.com/u/_diyagaur/", 
+};
 
 const About = () => {
   return (
@@ -56,10 +64,27 @@ const About = () => {
             viewport={{ once: false }}
             className="flex items-center justify-center xl:justify-start gap-6"
           >
-            <SocialMediaIcon imgSrc={facebookIcon} title="Facebook" />
-            <SocialMediaIcon imgSrc={instagramIcon} title="Instagram" />
-            <SocialMediaIcon imgSrc={twitterIcon} title="Twitter" />
-            <SocialMediaIcon imgSrc={youtubeIcon} title="YouTube" />
+            <SocialMediaIcon
+              imgSrc={linkedinIcon} // Consider changing to a LinkedIn icon if available
+              title="LinkedIn"
+              href={SOCIAL_LINKS.linkedIn}
+            />
+            <SocialMediaIcon
+              imgSrc={instagramIcon}
+              title="Instagram"
+              href={SOCIAL_LINKS.instagram}
+            />
+            <SocialMediaIcon
+              imgSrc={twitterIcon}
+              title="Twitter"
+              href={SOCIAL_LINKS.twitter}
+            />
+            <SocialMediaIcon
+              imgSrc={leetcodeIcon} 
+              title="Leetcode"
+              href={SOCIAL_LINKS.leetcode}
+              
+            />
           </motion.div>
         </div>
 
