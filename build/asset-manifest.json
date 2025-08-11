@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d81cf002.css",
+    "main.js": "/static/js/main.f0052220.js",
+    "static/media/ui-ux-project-three.svg": "/static/media/ui-ux-project-three.f175da488c29d57d2048b0376dc0fa80.svg",
+    "static/media/ui-ux-project-two.svg": "/static/media/ui-ux-project-two.9d2ebfa6f5128ba08b297b4060d20157.svg",
+    "static/media/projects-page.svg": "/static/media/projects-page.0d42eb61a62baab826494cf007ac3207.svg",
+    "static/media/ui-ux-project-one.svg": "/static/media/ui-ux-project-one.adb5baef952116d239c5b6d95b483c5d.svg",
+    "static/media/about-me-page.svg": "/static/media/about-me-page.94e99ef6ca4d454cf74c7acdd6ddeea9.svg",
+    "static/media/web-project-one.jpeg": "/static/media/web-project-one.7ef0461f72aedc165f64.jpeg",
+    "static/media/web-project-three.jpeg": "/static/media/web-project-three.5fc24b8e86904bfe5856.jpeg",
+    "static/media/home-page.svg": "/static/media/home-page.6fe03589b70b4236f800499c9eb76eea.svg",
+    "static/media/web-project-two.jpeg": "/static/media/web-project-two.49a6c95132ffa750cd8b.jpeg",
+    "static/media/about-illustration.svg": "/static/media/about-illustration.71feca1f6210ad9210ca9ecccabd0ad3.svg",
+    "static/media/contact-page.svg": "/static/media/contact-page.8fe9450aa59d1a30896545766f6665d0.svg",
+    "static/media/contact-illustration.svg": "/static/media/contact-illustration.dcccdbc7ef7fd7b6c08962f245602d42.svg",
+    "static/media/hero-illustration.svg": "/static/media/hero-illustration.bcad6edefb1c290b1d6a0f2ee888fcba.svg",
+    "static/media/icons8-leetcode (3).svg": "/static/media/icons8-leetcode (3).ab1aa89b122a47d0c6bbc3c886f00be4.svg",
+    "static/media/icons8-linkedin-35.svg": "/static/media/icons8-linkedin-35.4d433be85f8d8f9cf299b1632f7356b5.svg",
+    "static/media/instagram-icon.svg": "/static/media/instagram-icon.d312a5bada5ec01483fd75fb65253a6c.svg",
+    "static/media/twitter-icon.svg": "/static/media/twitter-icon.6ee17ea0c3abc78bce02fb05276f6b17.svg",
+    "index.html": "/index.html",
+    "static/media/download-btn-icon.svg": "/static/media/download-btn-icon.039ac21d34f40e044ebc8565550c5d14.svg",
+    "main.d81cf002.css.map": "/static/css/main.d81cf002.css.map",
+    "main.f0052220.js.map": "/static/js/main.f0052220.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d81cf002.css",
+    "static/js/main.f0052220.js"
+  ]
+}

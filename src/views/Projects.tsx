@@ -1,5 +1,5 @@
 // react
-import { useState } from "react";
+import { useState, useMemo } from "react";
 
 // assets
 import projectsPageImg from "../assets/projects-page.svg";
@@ -22,13 +22,10 @@ type Category = "ML" | "web";
 const Projects = () => {
   const [activeCategory, setActiveCategory] = useState<Category>("ML");
 
-  const filteredProjects = () => {
-    if (activeCategory === "ML") {
-      return projects.filter((item) => item.category === "ML");
-    } else {
-      return projects.filter((item) => item.category === "web");
-    }
-  };
+  const filteredProjects = useMemo(
+    () => projects.filter((project) => project.category === activeCategory),
+    [activeCategory]
+  );
 
   return (
     <div
@@ -61,31 +58,38 @@ const Projects = () => {
             className="flex items-center gap-4 justify-center xl:justify-start flex-col sm:flex-row"
           >
             <Button
-              secondary={activeCategory === "ML" ? true : false}
+              secondary={activeCategory === "ML"}
               onClick={() => setActiveCategory("ML")}
             >
-              UI/UX
+              Machine Learning
             </Button>
             <Button
-              secondary={activeCategory === "web" ? true : false}
+              secondary={activeCategory === "web"}
               onClick={() => setActiveCategory("web")}
             >
               Web design
             </Button>
           </motion.div>
 
-          <motion.div
-            variants={fadeIn("up")}
-            transition={transition()}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false }}
+          <div
             className="flex gap-12 mt-12 flex-wrap justify-center"
           >
-            {filteredProjects().map((item) => (
-              <Card imgSrc={item.img} title={item.title} />
+            {filteredProjects.map((item) => (
+              <motion.a
+                key={item.id}
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                variants={fadeIn("up")}
+                transition={transition()}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false }}
+              >
+                <Card imgSrc={item.img} title={item.title} />
+              </motion.a>
             ))}
-          </motion.div>
+          </div>
         </div>
       </div>
     </div>

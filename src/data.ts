@@ -1,8 +1,8 @@
-import MLOne from "./assets/ui-ux-project-one.svg";
-import MLTwo from "./assets/ui-ux-project-two.svg";
-import MLThree from "./assets/ui-ux-project-three.svg";
-import webOne from "./assets/web-project-one.jpeg";
-import webTwo from "./assets/web-project-two.jpeg";
+import MLOne from "./assets/ML1.png";
+import MLTwo from "./assets/ML2.png";
+import MLThree from "./assets/ML3.png";
+import webOne from "./assets/web1.png";
+import webTwo from "./assets/web2.png";
 import webThree from "./assets/web-project-three.jpeg";
 
 interface Project {
@@ -10,6 +10,7 @@ interface Project {
   category: string;
   img: string;
   title: string;
+  url: string;
 }
 
 export const projects: Project[] = [
@@ -17,36 +18,36 @@ export const projects: Project[] = [
     id: 0,
     category: "ML",
     img: MLOne,
-    title: "UI/UX Web Template",
+    title: "Yoga Pose Detection",
+    url:"https://github.com/DarshilPungalia/Research-Paper"
   },
   {
     id: 1,
     category: "ML",
     img: MLTwo,
-    title: "UI/UX Tablet Template",
+    title: "Anomaly Detection",
+    url:"https://github.com/diyagaur10/Anomaly-detection"
   },
   {
     id: 2,
     category: "ML",
     img: MLThree,
-    title: "Solar System App Design",
+    title: "Fake Website Detector",
+    url:"https://github.com/diyagaur10/URL-detection-project",
   },
   {
     id: 3,
     category: "web",
     img: webOne,
-    title: "Interior Design Website",
+    title: "Chat App",
+    url:"https://letzzzchat.vercel.app/",
   },
   {
     id: 4,
     category: "web",
     img: webTwo,
-    title: "Agency Landing Page",
+    title: "My Portfolio",
+    url:"https://me-diya.vercel.app/",
   },
-  {
-    id: 5,
-    category: "web",
-    img: webThree,
-    title: "Crypto Landing Page",
-  },
+  
 ];

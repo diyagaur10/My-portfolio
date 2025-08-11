@@ -4,13 +4,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#1a1a2e",               // dark background
-        secondary: "#ff69b4",             // baby pink highlight
-        babyPink: "#ffc0cb",              // lighter pink
-        textPrimary: "#ffc0cb",           // baby pink text
-        textSecondary: "#ffb6c1",         // soft pink
-        accent: "#2c2c54",                // dark accent
-        hoverSecondary: "#ff87b7",        // brighter hover pink
+        primary: "#1a1a2e",                       // dark background
+        secondary: "#FA8072",                     // main salmon/orange highlight
+        textPrimary: "#FFE5B4",                   // light peach text
+        textSecondary: "#FDD7AA",                 // soft orange/gold for secondary text
+        accent: "#2c2c54",                        // dark accent
+        hoverSecondary: "#E57365",                // darker salmon for hover
         hoverPrimary: "#292d33",
         divider: "rgba(255, 182, 193, 0.15)", // soft pink divider
         icons: "#ff69b4",

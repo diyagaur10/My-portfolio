@@ -78,7 +78,7 @@ const KnowMeAI = () => {
           onClick={handleAskGemini}
           disabled={isLoading}
         >
-          {isLoading ? "Thinking..." : "Ask Gemini"}
+          {isLoading ? "Thinking..." : "Ask Me!"}
         </button>
         <div className="mt-6 p-4 border border-neutral-600 rounded bg-neutral-700/50 min-h-[100px] text-textSecondary">
           {isLoading && <p>Loading answer...</p>}
