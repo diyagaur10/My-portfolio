@@ -12,7 +12,7 @@ module.exports = {
         hoverSecondary: "#E57365",                // darker salmon for hover
         hoverPrimary: "#292d33",
         divider: "rgba(255, 182, 193, 0.15)", // soft pink divider
-        icons: "#ff69b4",
+        icons: "#FA8072",
         overlay: "rgba(255, 182, 193, 0.2)",  // pinkish overlay
       },
       screens: {
